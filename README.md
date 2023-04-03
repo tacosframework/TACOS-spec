@@ -1,5 +1,5 @@
 # TACOS-spec
-TACOS Specification v1
+TACOS Framework v1
 
 ## Overview
 TACOS is a framework for assessing the development practices of open source projects against a set of secure development standards specified by the [NIST Secure Software Delivery Framework (SSDF) V1.1](https://csrc.nist.gov/Projects/ssdf).
