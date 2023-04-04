@@ -20,7 +20,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 
 ### Attestation statement field structure and assessment criteria (all fields are required except as noted)
 |Field   |Description   |Assessment   |
-|:--|:---------|:--------|
+|:--|:--|:--|
 |PackageName   |Canonicalize package name   |Canonicalization process applied to metadata   |
 |PackagePlatform   |Canonicalize package manager for the package   |Canonicalization process applied to metadata   |
 |PURL   |Validated PURL (package URL) for the package   |Canonicalization process applied to metadata   |
