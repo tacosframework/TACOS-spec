@@ -38,12 +38,12 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |SourceRepo2FAEnabled   |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
 |KnownReleasesURL   |All releases for this package have been mapped   |Mapped metadata generated off of verified versioning scheme   |
 |CleanReleaseAvailable   |There is a release available of this package that is free from vulnerabilities, and the latest compatible version of all dependencies are maintained and have no known vulnerabilities   |Release available with no vulnerabilities in package or package dependencies, and no unmaintained dependencies   |
-|KnownVulnerabilities   |This package has not made a fixed release for a vulnerability on its latest stable release   |There is at least 1 CVE for package on the latest stable release   |
-|KnownVulnerabilitiesInDependencies   |This package has not made a fixed release for a vulnerability in the dependency graph of its latest stable release   |There is at least 1 CVE in at least 1 dependency of the latest stable release   |
+|NoKnownVulnerabilities   |This package's latest release includes fixes for all known vulnerabilities |There are zero CVEs for the package on the latest release   |
+|NoKnownVulnerabilitiesInDependencies   |The dependencies of this package's latest release all have no known vulnerabilities in their latest releases |There are zero CVEs in the latest release of all dependencies of the latest package release   |
 |KnownVulnerabilitiesURL   |All vulnerabilities affecting a package, and its dependencies, have been identified   |Mapped metadata, including maintainer verification on which release streams are receiving security updates   |
 |PackageSecurityPolicyURL   |URL of active security policy with clear steps for coordinated disclosure of vulnerabilities   |Discoverable security policy exists   |
 |PackageSecurityContact   |URL of active security contact in the event of a vulnerability   |Discoverable security contact exists   |
-|BinariesInRepository   |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
+|NoBinariesInRepository   |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
 |CodeReviewPractice   |Consistent review of PRs in order to address bugs or vulnerabilities sooner, and also any potential contributions from bad actors   |Passes OpenSSF Scorecard code review check OR Maintainer attestation to override automated check   |
 |FuzzingPractice   |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check OR Maintainer attests to use of a fuzzing tool   |
 |ReproducibleBuilds   |Hashes from source code repo and package manager can be verified   |Maintainer attestation   |
@@ -75,7 +75,7 @@ The NIST SSDF v. 1.1 categories are:
 2. **Protecting the software:** Organizations should protect all components of their software from tampering and unauthorized access. 
 - SBOM-CycloneDX
 - SBOM-SPDX
-- BinariesInRepository
+- NoBinariesInRepository
 - FuzzingPractice
 - ReproducibleBuilds
 - ReleasesDigitallySigned
@@ -90,6 +90,6 @@ The NIST SSDF v. 1.1 categories are:
 
 4. **Respond to vulnerabilities:** Organizations should identify residual vulnerabilities in their software releases and have process and accountability to respond appropriately to those vulnerabilities and prevent similar ones from occurring in the future.
 - CleanReleaseAvailable
-- KnownVulnerabilities
-- KnownVulnerabilitiesInDependencies
+- NoKnownVulnerabilities
+- NoKnownVulnerabilitiesInDependencies
 - KnownVulnerabilitiesURL
