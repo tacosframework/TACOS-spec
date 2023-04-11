@@ -26,7 +26,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |PURL   |Validated PURL (package URL) for the package   |Canonicalization process applied to metadata   |
 |UpstreamRepositoryURL   |Validated url for source code in order to do other standards assessments, and record changes in its dependencies   |Manually verified upstream repository url metadata   |
 |SPDXLicenseLatestRelease   |Normalized, machine readable licensing data   |Manually verified, SPDX formatted metadata   |
-|LatestRelease   |Point release, mapped in the correct versioning scheme   |Manually verified versioning scheme and ingestion of latest release from upstream package managers resulting in metadata   |
+|LatestStableRelease   |Point release, mapped in the correct versioning scheme   |Manually verified versioning scheme and ingestion of latest stable (no alpha, RC, etc.) release from upstream package managers resulting in metadata   |
 |ReleasesInUse **(not required)**   |Releases in use within an application or organization (not required)   |Metadata derived from SBOM output, and dependency graph mapping to attest to full graphs   |
 |SBOM   |CycloneDX or SPDX SBOM of build of latest release. Each SBOM field has the following subfields   |Ability to generate and deliver the SBOM   |
 |SBOM.Type   |One of “CycloneDX” or “SPDX”   |   |
@@ -54,7 +54,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |PackageStatus.Status   |One of "Active", "Inactive", "Deprecated", or "EOL"   |   |
 |PackageStatus.LastModifiedDateTimeUTC   |Logged time of manual validation   |   |
 |IncomeStreams   |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
-|IncomeStreams.Type   |One of "Lifted", "Corporate", "Foundation", or "Variable"   |   |
+|IncomeStreams.Type   |One of "Lifted", "Corporate", "Foundation", "Variable", or "None"   |   |
 |IncomeStreams.EvidenceURL   |URL of the income stream evidence   |   |
 |IncomeStreams.LastModifiedDateTimeUTC   |Logged time of manual validation   |   |
 
@@ -66,7 +66,7 @@ The NIST SSDF v. 1.1 categories are:
  1. **Prepare the organization:** Organizations should ensure that people, processes, and technology are prepared to perform secure software development at the organization level.
 - IncomeStreams
 - 2FA enabled
-- LatestRelease
+- LatestStableRelease
 - KnownReleasesURL
 - PackageStatus
 - SDLCPolicyURL
