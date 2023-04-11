@@ -38,8 +38,8 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |SourceRepo2FAEnabled   |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
 |KnownReleasesURL   |All releases for this package have been mapped   |Mapped metadata generated off of verified versioning scheme   |
 |CleanReleaseAvailable   |There is a release available of this package that is free from vulnerabilities, and the latest compatible version of all dependencies are maintained and have no known vulnerabilities   |Release available with no vulnerabilities in package or package dependencies, and no unmaintained dependencies   |
-|KnownVulnerabilities   |This package has not made a fixed release for a vulnerability on its latest release   |There is at least 1 CVE for package on the latest release   |
-|KnownVulnerabilitiesInDependencies   |This package has not made a fixed release for a vulnerability in the dependency graph of its latest release   |There is at least 1 CVE in at least 1 dependency of the latest package release   |
+|KnownVulnerabilities   |This package has not made a fixed release for a vulnerability on its latest stable release   |There is at least 1 CVE for package on the latest stable release   |
+|KnownVulnerabilitiesInDependencies   |This package has not made a fixed release for a vulnerability in the dependency graph of its latest stable release   |There is at least 1 CVE in at least 1 dependency of the latest stable release   |
 |KnownVulnerabilitiesURL   |All vulnerabilities affecting a package, and its dependencies, have been identified   |Mapped metadata, including maintainer verification on which release streams are receiving security updates   |
 |PackageSecurityPolicyURL   |URL of active security policy with clear steps for coordinated disclosure of vulnerabilities   |Discoverable security policy exists   |
 |PackageSecurityContact   |URL of active security contact in the event of a vulnerability   |Discoverable security contact exists   |
@@ -54,7 +54,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |PackageStatus.Status   |One of "Active", "Inactive", "Deprecated", or "EOL"   |   |
 |PackageStatus.LastModifiedDateTimeUTC   |Logged time of manual validation   |   |
 |IncomeStreams   |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
-|IncomeStreams.Type   |One of "Lifted", "Corporate", "Foundation", "Variable", or "None"   |   |
+|IncomeStreams.Type   |Any of "Lifted", "Corporate", "Foundation", "Variable", or "None"   |   |
 |IncomeStreams.EvidenceURL   |URL of the income stream evidence   |   |
 |IncomeStreams.LastModifiedDateTimeUTC   |Logged time of manual validation   |   |
 
