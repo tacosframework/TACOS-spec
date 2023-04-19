@@ -24,7 +24,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |PackageName   |Canonicalize package name   |Canonicalization process applied to metadata   |
 |PackagePlatform   |Canonicalize package manager for the package   |Canonicalization process applied to metadata   |
 |PURL   |Validated PURL (package URL) for the package   |Canonicalization process applied to metadata   |
-|UpstreamRepositoryURL   |Validated url for source code in order to do other standards assessments, and record changes in its dependencies   |Manually verified upstream repository url metadata   |
+|UpstreamRepositoryURL   |Validated URL for source code in order to do other standards assessments, and record changes in its dependencies   |Manually verified upstream repository url metadata   |
 |SPDXLicenseLatestRelease   |Normalized, machine readable licensing data   |Manually verified, SPDX formatted metadata   |
 |LatestStableRelease   |Point release, mapped in the correct versioning scheme   |Manually verified versioning scheme and ingestion of latest stable (no alpha, RC, etc.) release from upstream package managers resulting in metadata   |
 |ReleasesInUse **(not required)**   |Releases in use within an application or organization (not required)   |Metadata derived from SBOM output, and dependency graph mapping to attest to full graphs   |
@@ -36,11 +36,11 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |SBOM.DigitalSignatureURL   |URL for the digital signature of the SBOM referred to by SBOM.URL   |   |
 |PackageManager2FAEnabled   |First-party attestation to 2FA practices on the release processes   |Maintainers use 2FA to push releases to the package manager   |
 |SourceRepo2FAEnabled   |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
-|KnownReleasesURL   |All releases for this package have been mapped   |Mapped metadata generated off of verified versioning scheme   |
+|KnownReleasesURL   |URL that returns a mapping of all releases for this package   |Mapped metadata generated off of verified versioning scheme   |
 |CleanReleaseAvailable   |There is a release available of this package that is free from vulnerabilities, and the latest compatible version of all dependencies are maintained and have no known vulnerabilities   |Release available with no vulnerabilities in package or package dependencies, and no unmaintained dependencies   |
 |NoKnownVulnerabilities   |This package's latest release includes fixes for all known vulnerabilities |There are zero CVEs for the package on the latest release   |
 |NoKnownVulnerabilitiesInDependencies   |The dependencies of this package's latest release all have no known vulnerabilities in their latest releases |There are zero CVEs in the latest release of all dependencies of the latest package release   |
-|KnownVulnerabilitiesURL   |All vulnerabilities affecting a package, and its dependencies, have been identified   |Mapped metadata, including maintainer verification on which release streams are receiving security updates   |
+|KnownVulnerabilitiesURL   |URL listing all vulnerabilities that affect the package and its dependencies   |Mapped metadata, including maintainer verification on which release streams are receiving security updates   |
 |PackageSecurityPolicyURL   |URL of active security policy with clear steps for coordinated disclosure of vulnerabilities   |Discoverable security policy exists   |
 |PackageSecurityContact   |URL of active security contact in the event of a vulnerability   |Discoverable security contact exists   |
 |NoBinariesInRepository   |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
@@ -48,9 +48,9 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |FuzzingPractice   |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check OR Maintainer attests to use of a fuzzing tool   |
 |ReproducibleBuilds   |Hashes from source code repo and package manager can be verified   |Maintainer attestation   |
 |ReleasesDigitallySigned   |Attests to the provenance of artifacts   |Maintainer attestation or manually verified metadata   |
-|SDLCPolicyURL   |URL of development practices or standards   |Discoverable body of SDLC standards exists   |
+|SDLCPolicyURL   |URL of development practices or standards for the package  |Discoverable body of SDLC standards exists   |
 |SDLCEvidenceDataURL   |URL of package development and development practices activity   |Discoverable record of SDLC actions and maintainer attestations exists   |
-|PackageStatus   |Validated data on a package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
+|PackageStatus   |Validated data on the package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
 |PackageStatus.Status   |One of "Active", "Inactive", "Deprecated", or "EOL"   |   |
 |PackageStatus.LastModifiedDateTimeUTC   |Logged time of manual validation   |   |
 |IncomeStreams   |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
