@@ -8,7 +8,7 @@ TACOS is a framework for assessing the development practices of open source proj
 The attestation itself is metadata that contains the history, timestamp and identity of who is making the statements, in addition to the statements themselves.
 
 ## Statements
-At the heart of TACOS are assertions about open source software development practices at the package level (not per-release at this time). It leverages a model of standards and assessment to provide a piece of metadata in response to that standard. The states of assessment against each objective standard are: True, False, and `NOASSERTION`. In some cases, such as licensing or SDLC Policy URL, it will be useful to include the direct piece of metadata or the evidence URL itself.  
+At the heart of TACOS are statements about open source software development practices at the package level (not per-release at this time). It leverages a model of standards and assessment to provide a piece of metadata in response to that standard. The states of assessment against each objective standard are: True, False, and `NOASSERTION`. In some cases, such as licensing or SDLC Policy URL, it will be useful to include the direct piece of metadata or the evidence URL itself.  
 
 The end product is a machine-readable format that can be referenced in an SBOM, or provided as a standalone report as a complementary artifact to software vendor attestation on their own internal software development practices.
 
