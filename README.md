@@ -74,8 +74,7 @@ The NIST SSDF v. 1.1 categories are:
 - SDLCEvidenceDataURL
 
 2. **Protecting the software:** Organizations should protect all components of their software from tampering and unauthorized access. 
-- SBOM-CycloneDX
-- SBOM-SPDX
+- SBOM: Type, Version, URL, Format, Digital signature
 - NoBinariesInRepository
 - FuzzingPractice
 - ReproducibleBuilds
