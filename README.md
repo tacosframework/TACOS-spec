@@ -65,7 +65,8 @@ Each field in this framework maps to the [NIST Secure Software Development Frame
 The NIST SSDF v. 1.1 categories are:
  1. **Prepare the organization:** Organizations should ensure that people, processes, and technology are prepared to perform secure software development at the organization level.
 - IncomeStreams
-- 2FA enabled
+- PackageManager2FAEnabled
+- SourceRepo2FAEnabled
 - LatestStableRelease
 - KnownReleasesURL
 - PackageStatus
