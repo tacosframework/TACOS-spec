@@ -53,7 +53,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |PackageStatus   |true\|false\|`NOASSERTION`    |Validated data on the package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
 |PackageStatus.Status   |String   |One of "Active", "Inactive", "Deprecated", or "EOL"   |   |
 |PackageStatus.LastModifiedDateTimeUTC   |Timestamp   |Logged time of manual validation in UTC   |   |
-|IncomeStreams   |true\|false\|`NOASSERTION`    |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
+|IncomeStreams   |Object    |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
 |IncomeStreams.Type   |String   |Any of "Lifted", "Corporate", "Foundation", "Variable", or "None"   |   |
 |IncomeStreams.EvidenceURL   |URL   |URL of the income stream evidence   |   |
 |IncomeStreams.LastModifiedDateTimeUTC   |Timestamp   |Logged time of manual validation   |   |
