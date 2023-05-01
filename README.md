@@ -50,7 +50,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |ReleasesDigitallySigned   |"True"\|"False"\|`NOASSERTION`    |Attests to the provenance of artifacts   |Maintainer attestation or manually verified metadata   |
 |SDLCPolicyURL   |URL   |URL of development practices or standards for the package  |Discoverable body of SDLC standards exists   |
 |SDLCEvidenceDataURL   |URL   |URL of package development and development practices activity   |Discoverable record of SDLC actions and maintainer attestations exists   |
-|PackageStatus   |"True"\|"False"\|`NOASSERTION`    |Validated data on the package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
+|PackageStatus   |Object    |Validated data on the package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
 |PackageStatus.Status   |String   |One of "Active", "Inactive", "Deprecated", or "EOL"   |   |
 |PackageStatus.LastModifiedDateTimeUTC   |Timestamp   |Logged time of manual validation in UTC   |   |
 |IncomeStreams   |Array of Strings    |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
