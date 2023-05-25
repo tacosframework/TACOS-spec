@@ -28,12 +28,12 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |SPDXLicenseLatestRelease   |SPDX expression   |Normalized, machine readable licensing data   |Manually verified, SPDX formatted metadata   |
 |LatestStableRelease   |String   |Point release, mapped in the correct versioning scheme   |Manually verified versioning scheme and ingestion of latest stable (no alpha, RC, etc.) release from upstream package managers resulting in metadata   |
 |ReleasesInUse **(not required)**   |Array of Strings   |Releases in use within an application or organization (not required)   |Metadata derived from SBOM output, and dependency graph mapping to attest to full graphs   |
-|SBOM   |Object   |CycloneDX or SPDX SBOM of build of latest release. Each SBOM field has the following subfields   |Ability to generate and deliver the SBOM   |
-|SBOM.Type   |String   |One of “CycloneDX” or “SPDX”   |   |
-|SBOM.Version   |String   |Version of the CycloneDX or SPDX specification for the SBOM   |   |
-|SBOM.Format   |String   |Format of the SBOM (usually one of “JSON” or “XML”)   |   |
-|SBOM.URL   |URL   |URL of the referenced SBOM   |   |
-|SBOM.DigitalSignatureURL   |URL   |URL for the digital signature of the SBOM referred to by SBOM.URL   |   |
+|SBOM   |Array of Objects   |CycloneDX or SPDX SBOM of build of latest release. Each SBOM field has the following subfields   |Ability to generate and deliver the SBOM   |
+|SBOM.[]Type   |String   |One of “CycloneDX” or “SPDX”   |   |
+|SBOM.[]Version   |String   |Version of the CycloneDX or SPDX specification for the SBOM   |   |
+|SBOM.[]Format   |String   |Format of the SBOM (usually one of “JSON” or “XML”)   |   |
+|SBOM.[]URL   |URL   |URL of the referenced SBOM   |   |
+|SBOM.[]DigitalSignatureURL   |URL   |URL for the digital signature of the SBOM referred to by SBOM.URL   |   |
 |PackageManager2FAEnabled   |"True"\|"False"\|`NOASSERTION`   |First-party attestation to 2FA practices on the release processes   |Maintainers use 2FA to push releases to the package manager   |
 |SourceRepo2FAEnabled   |"True"\|"False"\|`NOASSERTION`    |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
 |KnownReleasesURL   |URL   |URL that returns a mapping of all releases for this package   |Mapped metadata generated off of verified versioning scheme   |
