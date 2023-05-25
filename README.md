@@ -30,8 +30,6 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |ReleasesInUse **(not required)**   |Array of Strings   |Releases in use within an application or organization (not required)   |Metadata derived from SBOM output, and dependency graph mapping to attest to full graphs   |
 |SBOM   |Array of Objects   |CycloneDX or SPDX SBOM of build of latest release. Each SBOM field has the following subfields   |Ability to generate and deliver the SBOM   |
 |SBOM.[]Type   |String   |One of “CycloneDX” or “SPDX”   |   |
-|SBOM.[]Version   |String   |Version of the CycloneDX or SPDX specification for the SBOM   |   |
-|SBOM.[]Format   |String   |Format of the SBOM (usually one of “JSON” or “XML”)   |   |
 |SBOM.[]URL   |URL   |URL of the referenced SBOM   |   |
 |SBOM.[]DigitalSignatureURL   |URL   |URL for the digital signature of the SBOM referred to by SBOM.URL   |   |
 |PackageManager2FAEnabled   |"True"\|"False"\|`NOASSERTION`   |First-party attestation to 2FA practices on the release processes   |Maintainers use 2FA to push releases to the package manager   |
