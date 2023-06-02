@@ -32,26 +32,26 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |SBOM.[]Type   |String   |One of “CycloneDX” or “SPDX”   |   |
 |SBOM.[]URL   |URL   |URL of the referenced SBOM   |   |
 |SBOM.[]DigitalSignatureURL   |URL   |URL for the digital signature of the SBOM referred to by SBOM.URL   |   |
-|PackageManager2FAEnabled   |"True"\|"False"\|`NOASSERTION`   |First-party attestation to 2FA practices on the release processes   |Maintainers use 2FA to push releases to the package manager   |
-|SourceRepo2FAEnabled   |"True"\|"False"\|`NOASSERTION`    |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
+|PackageManager2FAEnabled   |"True"\|"False"\|`"NOASSERTION"`   |First-party attestation to 2FA practices on the release processes   |Maintainers use 2FA to push releases to the package manager   |
+|SourceRepo2FAEnabled   |"True"\|"False"\|`"NOASSERTION"`    |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
 |KnownReleasesURL   |URL   |URL that returns a mapping of all releases for this package   |Mapped metadata generated off of verified versioning scheme   |
-|CleanReleaseAvailable   |"True"\|"False"\|`NOASSERTION`    |There is a release available of this package that is free from vulnerabilities, and the latest compatible version of all dependencies are maintained and have no known vulnerabilities   |Release available with no vulnerabilities in package or package dependencies, and no unmaintained dependencies   |
-|NoKnownVulnerabilities   |"True"\|"False"\|`NOASSERTION`    |This package's latest release includes fixes for all known vulnerabilities |There are zero CVEs for the package on the latest release   |
-|NoKnownVulnerabilitiesInDependencies   |true\|false\|`NOASSERTION`    |The dependencies of this package's latest release all have no known vulnerabilities in their latest releases |There are zero CVEs in the latest release of all dependencies of the latest package release   |
+|CleanReleaseAvailable   |"True"\|"False"\|`"NOASSERTION"`    |There is a release available of this package that is free from vulnerabilities, and the latest compatible version of all dependencies are maintained and have no known vulnerabilities   |Release available with no vulnerabilities in package or package dependencies, and no unmaintained dependencies   |
+|NoKnownVulnerabilities   |"True"\|"False"\|`"NOASSERTION"`    |This package's latest release includes fixes for all known vulnerabilities |There are zero CVEs for the package on the latest release   |
+|NoKnownVulnerabilitiesInDependencies   |"True"\|"True"\|`"NOASSERTION"`    |The dependencies of this package's latest release all have no known vulnerabilities in their latest releases |There are zero CVEs in the latest release of all dependencies of the latest package release   |
 |KnownVulnerabilitiesURL   |URL   |URL listing all vulnerabilities that affect the package and its dependencies   |Mapped metadata, including maintainer verification on which release streams are receiving security updates   |
 |PackageSecurityPolicyURL   |URL   |URL of active security policy with clear steps for coordinated disclosure of vulnerabilities   |Discoverable security policy exists   |
 |PackageSecurityContact   |URL   |URL of active security contact in the event of a vulnerability   |Discoverable security contact exists   |
-|NoBinariesInRepository   |"True"\|"False"\|`NOASSERTION`    |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
-|CodeReviewPractice   |"True"\|"False"\|`NOASSERTION`    |Consistent review of PRs in order to address bugs or vulnerabilities sooner, and also any potential contributions from bad actors   |Passes OpenSSF Scorecard code review check OR Maintainer attestation to override automated check   |
-|FuzzingPractice   |"True"\|"False"\|`NOASSERTION`    |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check OR Maintainer attests to use of a fuzzing tool   |
-|ReproducibleBuilds   |"True"\|"False"\|`NOASSERTION`    |Hashes from source code repo and package manager can be verified   |Maintainer attestation   |
-|ReleasesDigitallySigned   |"True"\|"False"\|`NOASSERTION`    |Attests to the provenance of artifacts   |Maintainer attestation or manually verified metadata   |
+|NoBinariesInRepository   |"True"\|"False"\|`"NOASSERTION"`    |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
+|CodeReviewPractice   |"True"\|"False"\|`"NOASSERTION"`    |Consistent review of PRs in order to address bugs or vulnerabilities sooner, and also any potential contributions from bad actors   |Passes OpenSSF Scorecard code review check OR Maintainer attestation to override automated check   |
+|FuzzingPractice   |"True"\|"False"\|`"NOASSERTION"`    |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check OR Maintainer attests to use of a fuzzing tool   |
+|ReproducibleBuilds   |"True"\|"False"\|`"NOASSERTION"`    |Hashes from source code repo and package manager can be verified   |Maintainer attestation   |
+|ReleasesDigitallySigned   |"True"\|"False"\|`"NOASSERTION"`    |Attests to the provenance of artifacts   |Maintainer attestation or manually verified metadata   |
 |SDLCPolicyURL   |URL   |URL of development practices or standards for the package  |Discoverable body of SDLC standards exists   |
 |SDLCEvidenceDataURL   |URL   |URL of package development and development practices activity   |Discoverable record of SDLC actions and maintainer attestations exists   |
 |PackageStatus   |Object    |Validated data on the package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
 |PackageStatus.Status   |String   |One of "Active", "Inactive", "Deprecated", "Removed", or "EOL"   |   |
 |PackageStatus.LastModifiedDateTimeUTC   |Timestamp   |Logged time of manual validation in UTC   |   |
-|IncomeStreams   |Array of Objects    |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
+|IncomeStreams   |Array of Objectsj|`"NOASSERTION"`    |Package has validated income streams including lifting income from Tidelift, corporate backing, foundation, or variable/community backing   |Manually verified OR maintainer attested metadata   |
 |IncomeStreams.[]Type   |String   |Any of "Lifted", "Corporate", "Foundation", "Variable", or "None"   |   |
 |IncomeStreams.[]EvidenceURL   |URL   |URL of the income stream evidence   |   |
 |IncomeStreams.[]LastModifiedDateTimeUTC   |Timestamp   |Logged time of manual validation   |   |
