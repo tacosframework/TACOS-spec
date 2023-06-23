@@ -41,6 +41,9 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |KnownVulnerabilitiesURL   |URL   |URL listing all vulnerabilities that affect the package and its dependencies   |Mapped metadata, including maintainer verification on which release streams are receiving security updates   |
 |PackageSecurityPolicyURL   |URL   |URL of active security policy with clear steps for coordinated disclosure of vulnerabilities   |Discoverable security policy exists   |
 |PackageSecurityContact   |URL   |URL of active security contact in the event of a vulnerability   |Discoverable security contact exists   |
+|SecurityResponsive   |"True"\|"False"\|"NOASSERTION"    |Identifies whether the project is likely to respond to security issues   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
+|MultipleMaintainers   |"True"\|"False"\|"NOASSERTION"    |Identifies whether the project has multiple maintainers to ensure package and community sustainability   |>1 release manager detected through package manager   |
+|SuccessionPlan   |"True"\|"False"\|"NOASSERTION"    |Identifies whether the project has a succession plan in place when a maintainer is ready to stop maintaining the package   |Maintainer attestation exists   |
 |NoBinariesInRepository   |"True"\|"False"\|"NOASSERTION"    |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
 |CodeReviewPractice   |"True"\|"False"\|"NOASSERTION"    |Consistent review of PRs in order to address bugs or vulnerabilities sooner, and also any potential contributions from bad actors   |Passes OpenSSF Scorecard code review check OR Maintainer attestation to override automated check   |
 |FuzzingPractice   |"True"\|"False"\|"NOASSERTION"    |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check OR Maintainer attests to use of a fuzzing tool   |
@@ -70,6 +73,8 @@ The NIST SSDF v. 1.1 categories are:
 - PackageStatus
 - SDLCPolicyURL
 - SDLCEvidenceDataURL
+- MultipleMaintainers
+- SuccessionPlan
 
 2. **Protecting the software:** Organizations should protect all components of their software from tampering and unauthorized access. 
 - SBOM: Type, Version, URL, Format, Digital signature
@@ -85,6 +90,7 @@ The NIST SSDF v. 1.1 categories are:
 - CodeReviewPractice
 - PackageSecurityPolicyURL
 - PackageSecurityContact
+- SecurityResponsive
 
 4. **Respond to vulnerabilities:** Organizations should identify residual vulnerabilities in their software releases and have process and accountability to respond appropriately to those vulnerabilities and prevent similar ones from occurring in the future.
 - CleanReleaseAvailable
