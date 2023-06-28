@@ -33,7 +33,7 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |SBOM.[]URL   |URL   |URL of the referenced SBOM   |   |
 |SBOM.[]DigitalSignatureURL   |URL   |URL for the digital signature of the SBOM referred to by SBOM.URL   |   |
 |PackageManager2FAEnabled   |"True"\|"False"\|"NOASSERTION"   |First-party attestation to 2FA practices on the release processes   |Maintainers use 2FA to push releases to the package manager   |
-|SourceRepo2FAEnabled   |"True"\|"False"\|"NOASSERTION"    |First-part attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
+|SourceRepo2FAEnabled   |"True"\|"False"\|"NOASSERTION"    |First-party attestation to 2FA practices on the source repository   |Maintainers use 2FA to access the source code repository   |
 |KnownReleasesURL   |URL   |URL that returns a mapping of all releases for this package   |Mapped metadata generated off of verified versioning scheme   |
 |CleanReleaseAvailable   |"True"\|"False"\|"NOASSERTION"    |There is a release available of this package that is free from vulnerabilities, and the latest compatible version of all dependencies are maintained and have no known vulnerabilities   |Release available with no vulnerabilities in package or package dependencies, and no unmaintained dependencies   |
 |NoKnownVulnerabilities   |"True"\|"False"\|"NOASSERTION"    |This package's latest release includes fixes for all known vulnerabilities |There are zero CVEs for the package on the latest release   |
