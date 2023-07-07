@@ -47,7 +47,6 @@ Each attestation has a timestamp associated with it, and assessments and resulti
 |NoBinariesInRepository   |"True"\|"False"\|"NOASSERTION"    |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check OR Maintainer attestation to override automated check   |
 |CodeReviewPractice   |"True"\|"False"\|"NOASSERTION"    |Consistent review of PRs in order to address bugs or vulnerabilities sooner, and also any potential contributions from bad actors   |Passes OpenSSF Scorecard code review check OR Maintainer attestation to override automated check   |
 |FuzzingPractice   |"True"\|"False"\|"NOASSERTION"    |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check OR Maintainer attests to use of a fuzzing tool   |
-|ReproducibleBuilds   |"True"\|"False"\|"NOASSERTION"    |Hashes from source code repo and package manager can be verified   |Maintainer attestation   |
 |ReleasesDigitallySigned   |"True"\|"False"\|"NOASSERTION"    |Attests to the provenance of artifacts   |Maintainer attestation or manually verified metadata   |
 |SDLCPolicyURL   |URL   |URL of development practices or standards for the package  |Discoverable body of SDLC standards exists   |
 |SDLCEvidenceDataURL   |URL   |URL of package development and development practices activity   |Discoverable record of SDLC actions and maintainer attestations exists   |
