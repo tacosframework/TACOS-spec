@@ -53,7 +53,6 @@ At this time, we have not formally specified the structure of an attestation rep
 |NoBinariesInRepository   |Metadata   |"True"\|"False"\|"NOASSERTION"    |Identifies whether the project has generated executable (binary) artifacts in the source repository that could result in maliciously subverted executables   |Passes OpenSSF Scorecard binary artifacts check   |
 |CodeReviewPractice   |Metadata   |"True"\|"False"\|"NOASSERTION"    |Consistent review of PRs in order to address bugs or vulnerabilities sooner, and also any potential contributions from bad actors   |Passes OpenSSF Scorecard code review check   |
 |FuzzingPractice   |Metadata   |"True"\|"False"\|"NOASSERTION"    |Assessing the practice of feeding random data in to expose exploitable bugs   |Passes OpenSSF Scorecard fuzzing check   |
-|ReleasesDigitallySigned   |Metadata   |"True"\|"False"\|"NOASSERTION"    |Attests to the provenance of artifacts   |Passes OpenSSF Scorecard signed releases check   |
 |SDLCPolicyURL   |Metadata   |URL   |URL of development practices or standards for the package  |Discoverable body of SDLC standards exists   |
 |SDLCEvidenceDataURL   |Metadata   |URL   |URL of package development and development practices activity   |Discoverable record of SDLC actions and maintainer attestations exists   |
 |PackageStatus   |Attestation   |Object    |Validated data on the package that may be signaling that it will be abandoned, deprecated, or moved to EOL   |Passes automated checks and manual verification that indicates there is at least one maintainer that is paying attention to potential bugs or security risks that could compromise the software supply chain   |
@@ -79,7 +78,7 @@ We intend to continue [revising this framework](https://github.com/tacosframewor
 |e) Encrypting sensitive data, such as credentials, to the extent practicable and based on risk;     |4e(i)(E)    |PO.5.2   |DocumentedBuildPractices  |
 |f) Implementing defensive cyber security practices, including continuous monitoring of operations and alerts and, as necessary, responding to suspected and confirmed cyber incidents;      |4e(i)(F)    |PO.3.2, PO.3.3, PO.5.1, PO.5.2   |SecurityResponsive<br />IncomeStreams  |
 |2) The software producer has made a good-faith effort to maintain trusted source code supply chains by: <br />a) Employing automated tools or comparable processes; and <br />b) Establishing a process that includes reasonable steps to address the security of third-party components and manage related vulnerabilities;      |4e(iii)    |PO 1.1, PO.3.1, PO.3.2, PO.5.1, PO.5.2, PS.1.1, PS.2.1, PS.3.1, PW.4.1, PW.4.4, PW 7.1, PW 8.1, RV 1.1   |SDLCPolicyURL<br />SDLCEvidenceDataURL<br />CleanReleaseAvailable<br />DependenciesAreManaged<br />FixedVulnerabilities<br />DependenciesAreManaged<br />FuzzingPractice<br />IncomeStreams  |
-|3) The software producer maintains provenance data for internal and third-party code incorporated into the software;       |4e(vi)    |PO.1.3, PO.3.2, PO.5.1, PO.5.2, PS.3.1, PS.3.2, PW.4.1, PW.4.4, RV.1.1, RV.1.2   |SBOM: Type, Version, URL, Format, Digital signature<br />ReleasesDigitallySigned  |
+|3) The software producer maintains provenance data for internal and third-party code incorporated into the software;       |4e(vi)    |PO.1.3, PO.3.2, PO.5.1, PO.5.2, PS.3.1, PS.3.2, PW.4.1, PW.4.4, RV.1.1, RV.1.2   |SBOM: Type, Version, URL, Format, Digital signature<br /> |
 |4) The software producer employed automated tools or comparable processes that check for security vulnerabilities. In addition:<br />a) The software producer ensured these processes operate on an ongoing basis and, at a minimum, prior to product, version, or update releases and <br />b) The software producer has a policy or process to address discovered security vulnerabilities prior to product release; and <br />c) The software producer operates a vulnerability disclosure program and accepts, reviews, and addresses disclosed software vulnerabilities in a timely fashion.       |4e(iv)    |PO.4.1, PO.4.2, PS.1.1, PW.2.1, PW.4.4, PW.5.1, PW.6.1, PW.6.2, PW.7.1, PW.7.2, PW.8.2, PW.9.1, PW.9.2, RV.1.1, RV.1.2, RV.1.3, RV.2.1, RV.2.2, RV.3.3    |SDLCPolicyURL<br />PackageSecurityPolicyURL<br />PackageSecurityContact<br />SecurityResponsive<br />CleanReleaseAvailable<br />SDLCEvidenceDataURL<br />IncomeStreams  |
 
 
@@ -105,7 +104,6 @@ The NIST SSDF v. 1.1 categories are:
 - NoBinariesInRepository
 - FuzzingPractice
 - ReproducibleBuilds
-- ReleasesDigitallySigned
 
 3. **Produce well-secured software:** Organizations should leverage people, processes and tools to produce well-secured software with minimal security vulnerabilities in its releases.
 - PackageName
